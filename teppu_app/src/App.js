@@ -4,11 +4,12 @@ import './bootstrap.css';
 import io from "socket.io-client";
 
 const ip = "127.0.0.1";
-// const ip = "218.235.241.14";
 const port = "8080"
-const address = "http://" + ip + ":" + port
 
-console.log(address);
+// const ip = "13.58.124.57";
+// const port = "80"
+const address = "http://" + ip + ":" + port
+const lobbyAddr = "http://" + ip + "/lobby" + ":" + port
 
 const customStyles = {
   content : {
@@ -37,9 +38,11 @@ class App extends Component {
 
     this.inputChange = this.inputChange.bind(this);
     this.usernameChange = this.usernameChange.bind(this);
+    
     //Relate to create room
     this.roomTitleChange = this.roomTitleChange.bind(this);
     this.createRoom = this.createRoom.bind(this);
+    
     //Relate to Modal
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
